@@ -1,0 +1,17 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: projects
+  namespace: argocd
+spec:
+  project: default
+  source:
+    repoURL: https://github.com/<your-account>/<new-repo>.git
+    targetRevision: master
+    path: projects
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: projects
+  syncPolicy:
+    syncOptions:
+      - CreateNamespace=true
