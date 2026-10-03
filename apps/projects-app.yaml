@@ -6,7 +6,7 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: https://github.com/<your-account>/<new-repo>.git
+    repoURL: https://github.com/gangeddulagouthamreddy/gitops.config.apps.git
     targetRevision: master
     path: projects
   destination:
